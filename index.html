@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VISAGE — туристические визы в Грецию и Японию под ключ</title>
+<meta name="description" content="Оформление туристических виз в Грецию (шенген) и Японию под ключ. Без посещения консульства. Шенген в Грецию от 10 000 руб., виза в Японию 10 000–11 000 руб.">
+<style>
+  :root{
+    --navy:#0e315b;
+    --navy-deep:#08203c;
+    --blue:#2b7bd6;
+    --blue-dark:#1f6fd0;
+    --blue-soft:#8fb8e8;
+    --accent:#f0821e;
+    --light:#eef2f8;
+    --light-2:#e2e9f3;
+    --light-3:#edf1f8;
+    --light-4:#eaf0f7;
+    --text:#33475e;
+    --muted:#6b7f95;
+    --faint:#93a6bb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Segoe UI","Helvetica Neue",Arial,"Noto Sans",sans-serif;
+    background:var(--navy-deep);
+    color:var(--text);
+    line-height:1.4;
+  }
+  img,svg{display:block}
+  a{color:inherit}
+  .page{max-width:980px;margin:0 auto;background:var(--light);box-shadow:0 0 80px rgba(0,0,0,.45)}
+
+  /* ============ КНОПКИ ============ */
+  .btn{
+    display:inline-block;
+    background:linear-gradient(#fa9b25,#ee7c00);
+    color:#fff;
+    font-weight:600;
+    font-size:15px;
+    padding:13px 36px;
+    border-radius:26px;
+    text-decoration:none;
+    box-shadow:0 6px 16px rgba(238,124,0,.45), inset 0 -3px 0 rgba(0,0,0,.18);
+    transition:transform .15s ease, box-shadow .15s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(238,124,0,.55), inset 0 -3px 0 rgba(0,0,0,.18)}
+  .btn:active{transform:translateY(0)}
+  .btn:focus-visible{outline:3px solid #ffd9a8;outline-offset:2px}
+
+  /* ============ ШАПКА / HERO ============ */
+  .hero{
+    position:relative;
+    background:linear-gradient(120deg,#0d3768 0%,#14508e 55%,#2b6cb0 100%);
+    color:#fff;
+    padding:34px 56px 74px;
+    overflow:hidden;
+  }
+  .hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;position:relative;z-index:2}
+  .logo{display:flex;gap:12px;align-items:center;text-decoration:none}
+  .logo-mark{width:52px;height:52px;flex:none}
+  .logo-name{font-size:26px;letter-spacing:2px;font-weight:700;line-height:1.1}
+  .logo-tag{font-size:10px;letter-spacing:3px;text-transform:uppercase;opacity:.75}
+  .hero-phone{text-align:right;font-size:15px}
+  .hero-phone a{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:600}
+  .hero-phone a svg{width:16px;height:16px}
+  .hero-phone small{display:block;font-size:11px;opacity:.75;margin-top:3px}
+  .hero-inner{position:relative;z-index:2;max-width:56%}
+  .hero h1{font-size:44px;line-height:1.16;margin:52px 0 14px;font-weight:700}
+  .hero h1 .accent{color:#f68b1f}
+  .hero h1 .sep{display:inline-block;width:3px;height:34px;background:rgba(255,255,255,.55);margin:0 16px;vertical-align:middle;border-radius:2px}
+  .hero-sub{font-size:16px;opacity:.85;margin-bottom:28px}
+  .hero-badges{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px}
+  .badge{
+    display:flex;gap:11px;align-items:center;
+    background:#fff;color:var(--text);
+    border-radius:8px;padding:10px 18px 10px 12px;
+    box-shadow:0 8px 20px rgba(4,26,54,.28);
+  }
+  .badge-icon{width:34px;height:34px;flex:none;background:#e8f0fb;border-radius:6px;display:grid;place-items:center;color:var(--blue)}
+  .badge-icon svg{width:19px;height:19px}
+  .badge b{display:block;font-size:13px;color:#20344c;line-height:1.25}
+  .badge span{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+  .hero-art{position:absolute;right:-30px;bottom:-4px;width:520px;max-width:56%;height:auto;pointer-events:none;z-index:1}
+
+  /* ============ СЕКЦИИ ============ */
+  .section{padding:52px 56px 20px;position:relative}
+  .title{
+    text-align:center;color:var(--blue-dark);
+    font-size:27px;font-weight:700;margin:0 0 12px;
+  }
+  .title-sub{text-align:center;color:var(--muted);font-size:14px;margin:0 auto 36px;max-width:560px}
+  .wave{display:block;width:100%;height:60px;margin-top:36px}
+
+  /* --- Какие визы --- */
+  .visas{background:var(--light)}
+  .visa-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;position:relative;max-width:820px;margin:0 auto}
+  .visa-grid::after{content:"";position:absolute;left:50%;top:4px;bottom:4px;border-left:2px dashed #c3d2e4}
+  .visa-col{padding:0 22px}
+  .visa-icon{color:var(--blue);margin-bottom:12px}
+  .visa-icon svg{width:46px;height:46px}
+  .visa-col h3{color:var(--blue-dark);font-size:17px;margin:0 0 12px}
+  .visa-list{list-style:none;margin:0 0 12px}
+  .visa-list li{position:relative;padding-left:16px;font-size:13.5px;margin-bottom:6px}
+  .visa-list li::before{content:"";position:absolute;left:2px;top:7px;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+  .visa-note{font-size:12.5px;margin:5px 0}
+  .visa-note.hl{color:var(--blue)}
+
+  /* --- Услуги --- */
+  .services{background:var(--light-2)}
+  .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .service-card{
+    border:1.5px dashed #b9c9dd;border-radius:10px;
+    background:rgba(255,255,255,.55);
+    padding:24px 14px;text-align:center;
+    font-size:12.5px;line-height:1.5;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .service-card:hover{background:#fff;transform:translateY(-3px)}
+  .service-icon{width:44px;height:44px;margin:0 auto 12px;color:var(--blue)}
+  .service-icon svg{width:44px;height:44px}
+
+  /* --- Почему мы --- */
+  .why{background:var(--light-3);overflow:hidden}
+  .why-bg{position:absolute;inset:0;color:#2b7bd6;opacity:.1;pointer-events:none}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center;position:relative}
+  .why-icon{
+    width:52px;height:52px;border-radius:50%;
+    margin:0 auto 12px;display:grid;place-items:center;
+    color:#fff;background:var(--blue);
+    box-shadow:0 6px 14px rgba(43,123,214,.35);
+  }
+  .why-item:nth-child(even) .why-icon{background:var(--blue-soft);box-shadow:0 6px 14px rgba(143,184,232,.45)}
+  .why-icon svg{width:24px;height:24px}
+  .why-text{font-size:12.5px;line-height:1.5}
+
+  /* --- Шаги --- */
+  .steps-bg{background:var(--light-2)}
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;position:relative}
+  .step{text-align:center;padding:0 8px;position:relative}
+  .step:not(:last-child)::after{
+    content:"";position:absolute;right:-11px;top:17px;
+    width:11px;height:11px;
+    border-top:2px solid #b9c9dd;border-right:2px solid #b9c9dd;
+    transform:rotate(45deg);
+  }
+  .step-icon{width:46px;height:46px;margin:0 auto 10px;color:var(--blue)}
+  .step-icon svg{width:46px;height:46px}
+  .step-num{font-size:13px;font-weight:700;color:var(--blue-dark);margin-bottom:6px}
+  .step p{font-size:11px;color:var(--muted);line-height:1.45}
+
+  /* --- Цены --- */
+  .pricing{background:var(--light-4)}
+  .pricing-wrap{display:grid;grid-template-columns:1fr 1fr auto;gap:22px;align-items:center;max-width:860px;margin:0 auto}
+  .price-card{
+    background:#fff;border-radius:10px;padding:20px 26px;
+    box-shadow:0 10px 24px rgba(23,60,110,.12);
+  }
+  .price-card h3{margin:0 0 8px;font-size:15px;color:var(--blue-dark)}
+  .price{font-size:26px;font-weight:800;color:#22364e;line-height:1.1}
+  .price .cur{font-size:17px;font-weight:700}
+  .price-sub{font-size:12px;color:var(--muted);margin:5px 0 0}
+  .price-term{font-size:11px;color:var(--faint);margin:7px 0 0}
+
+  /* --- CTA --- */
+  .cta{background:linear-gradient(110deg,#0f3f78,#1a63a8);color:#fff;padding:0 56px 50px;position:relative;overflow:hidden}
+  .wave-top{margin:0 0 30px;height:64px}
+  .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;position:relative;z-index:2}
+  .cta-plane{width:120px;flex:none;color:#7fb0e2;opacity:.75}
+  .cta h2{font-size:27px;line-height:1.35;font-weight:700;margin:0}
+
+  /* ============ ПОДВАЛ ============ */
+  footer{background:var(--navy);color:#cfdcec;padding:44px 56px 26px}
+  .footer-grid{display:grid;grid-template-columns:1.25fr 1fr .8fr;gap:34px}
+  .footer-logo .logo-name{font-size:22px}
+  .footer-note{font-size:12px;opacity:.75;margin-top:16px;max-width:250px}
+  footer h4{font-size:13px;color:#fff;margin:0 0 16px;font-weight:600}
+  .contact-line{display:flex;gap:10px;align-items:center;font-size:12.5px;margin-bottom:11px;color:#cfdcec;text-decoration:none}
+  a.contact-line:hover{color:#fff}
+  .contact-ico{width:26px;height:26px;flex:none;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center}
+  .contact-ico svg{width:13px;height:13px}
+  .footer-links a{display:block;color:#cfdcec;font-size:12.5px;text-decoration:none;margin-bottom:9px;padding-left:14px;position:relative}
+  .footer-links a::before{content:"";position:absolute;left:2px;top:6px;width:4px;height:4px;border-radius:50%;background:#5d84b4}
+  .footer-links a:hover{color:#fff}
+  .socials{display:flex;justify-content:center;gap:14px;border-top:1px solid rgba(255,255,255,.15);margin-top:30px;padding-top:24px}
+  .social{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center;color:#fff;text-decoration:none;transition:background .2s ease}
+  .social:hover{background:var(--accent)}
+  .social svg{width:16px;height:16px}
+  .copyright{text-align:center;font-size:11px;opacity:.55;margin-top:20px}
+
+  /* ============ АДАПТИВ ============ */
+  @media (max-width:900px){
+    .hero{padding:28px 32px 60px}
+    .hero-inner{max-width:100%}
+    .hero-art{opacity:.28;right:-80px}
+    .hero h1{font-size:36px;margin-top:36px}
+    .section{padding:44px 32px 16px}
+    .visa-grid{grid-template-columns:1fr;gap:30px}
+    .visa-grid::after{display:none}
+    .services-grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid{grid-template-columns:repeat(2,1fr);gap:28px}
+    .steps{grid-template-columns:repeat(3,1fr);gap:26px 10px}
+    .step:nth-child(3)::after{display:none}
+    .pricing-wrap{grid-template-columns:1fr;max-width:480px}
+    .pricing-wrap .btn{justify-self:center}
+    .cta{padding:0 32px 44px}
+    .cta-inner{flex-direction:column;text-align:center}
+    footer{padding:38px 32px 24px}
+    .footer-grid{grid-template-columns:1fr;gap:26px}
+  }
+  @media (max-width:560px){
+    .hero{padding:24px 20px 52px}
+    .hero-top{flex-direction:column;gap:14px}
+    .hero-phone{text-align:left}
+    .hero h1{font-size:29px}
+    .hero h1 .sep{margin:0 10px;height:26px}
+    .section{padding:38px 20px 12px}
+    .title{font-size:23px}
+    .services-grid,.why-grid,.steps{grid-template-columns:1fr}
+    .step::after{display:none}
+    .cta{padding:0 20px 38px}
+    .cta h2{font-size:22px}
+    footer{padding:32px 20px 20px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ================= ШАПКА ================= -->
+  <header class="hero">
+    <div class="hero-top">
+      <a class="logo" href="#top" aria-label="VISAGE — визовые решения">
+        <svg class="logo-mark" viewBox="0 0 52 52" aria-hidden="true">
+          <circle cx="26" cy="26" r="26" fill="#1e6bc0"/>
+          <path d="M25 9v22H13c1-9 6-17 12-22z" fill="#ffffff"/>
+          <path d="M28 12v19h11c-1-8-5-15-11-19z" fill="#dfe9f5"/>
+          <path d="M11 34h30c-3 6.5-8.5 10-15 10s-12-3.5-15-10z" fill="#ffffff"/>
+          <path d="M9 41q4 3 8 0q4 3 8 0q4 3 8 0q4 3 8 0" stroke="#9cc4ec" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span>
+          <span class="logo-name">VISAGE</span><br>
+          <span class="logo-tag">визовые решения</span>
+        </span>
+      </a>
+      <div class="hero-phone">
+        <a href="tel:88005552460">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+          8 800 555-24-60
+        </a>
+        <small>Бесплатно по России</small>
+      </div>
+    </div>
+
+    <div class="hero-inner">
+      <h1>Визы<br><span class="accent">в Грецию</span><span class="sep"></span>и в Японию</h1>
+      <p class="hero-sub">Оформление под ключ. Без посещения консульств</p>
+      <div class="hero-badges">
+        <div class="badge">
+          <span class="badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>
+          </span>
+          <span><b>Гарантия одобрения</b><span>Берём на себя все заботы</span></span>
+        </div>
+        <div class="badge">
+          <span class="badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          </span>
+          <span><b>Сроки от 1 дня</b><span>Оперативная подготовка и подача</span></span>
+        </div>
+      </div>
+      <a class="btn" href="#request">Оставить заявку</a>
+    </div>
+
+    <!-- Иллюстрация: парусник, море, силуэт башни -->
+    <svg class="hero-art" viewBox="0 0 520 460" aria-hidden="true">
+      <defs>
+        <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+          <stop offset="0" stop-color="#ffffff" stop-opacity=".26"/>
+          <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2a6db5"/>
+          <stop offset="1" stop-color="#0b2f5c"/>
+        </linearGradient>
+        <linearGradient id="sail" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset="1" stop-color="#cfe0f2"/>
+        </linearGradient>
+        <clipPath id="sailR"><path d="M268 62 C322 138 344 244 346 330 L268 330 Z"/></clipPath>
+        <clipPath id="sailL"><path d="M250 84 C204 158 184 252 182 330 L250 330 Z"/></clipPath>
+      </defs>
+      <circle cx="260" cy="240" r="215" fill="url(#glow)"/>
+      <g fill="#ffffff">
+        <circle cx="60" cy="60" r="1.4" opacity=".8"/>
+        <circle cx="120" cy="30" r="1.1" opacity=".7"/>
+        <circle cx="360" cy="20" r="1.3" opacity=".8"/>
+        <circle cx="470" cy="96" r="1.2" opacity=".7"/>
+        <circle cx="300" cy="40" r="1" opacity=".6"/>
+      </g>
+      <g fill="#ffcf5c">
+        <path d="M452 52l2.2 6.8 6.8 2.2-6.8 2.2-2.2 6.8-2.2-6.8-6.8-2.2 6.8-2.2z"/>
+        <path d="M92 88l1.7 5.2 5.2 1.7-5.2 1.7-1.7 5.2-1.7-5.2-5.2-1.7 5.2-1.7z" opacity=".85"/>
+      </g>
+      <g fill="#ffffff" opacity=".16">
+        <ellipse cx="120" cy="122" rx="46" ry="14"/>
+        <ellipse cx="152" cy="112" rx="30" ry="12"/>
+        <ellipse cx="420" cy="152" rx="52" ry="15"/>
+        <ellipse cx="390" cy="142" rx="30" ry="11"/>
+      </g>
+      <g stroke="#eaf2fb" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".9">
+        <path d="M120 78q8-8 16 0q8-8 16 0"/>
+        <path d="M176 58q6-6 12 0q6-6 12 0"/>
+      </g>
+      <g stroke="#a9c9ec" stroke-width="4" fill="none" opacity=".5" stroke-linecap="round">
+        <path d="M400 330c22-44 32-92 34-150 2 58 12 106 34 150"/>
+        <path d="M410 330a24 24 0 0 1 48 0"/>
+        <line x1="412" y1="282" x2="456" y2="282"/>
+        <line x1="420" y1="238" x2="448" y2="238"/>
+        <line x1="426" y1="196" x2="442" y2="196"/>
+        <line x1="434" y1="180" x2="434" y2="148"/>
+      </g>
+      <path d="M0 336 C120 328 400 328 520 336 L520 460 L0 460 Z" fill="url(#sea)"/>
+      <g stroke="#bcd9f6" stroke-width="2" opacity=".35" stroke-linecap="round">
+        <path d="M60 356h44"/><path d="M330 368h56"/><path d="M150 388h40"/><path d="M400 398h48"/><path d="M90 418h60"/>
+      </g>
+      <ellipse cx="258" cy="344" rx="122" ry="10" fill="#ffffff" opacity=".12"/>
+      <line x1="259" y1="330" x2="259" y2="52" stroke="#e8eef6" stroke-width="3"/>
+      <path d="M259 50l26 7-26 7z" fill="#f6a21c"/>
+      <path d="M268 62 C322 138 344 244 346 330 L268 330 Z" fill="url(#sail)"/>
+      <g clip-path="url(#sailR)" fill="#3d78b8" opacity=".85">
+        <rect x="260" y="180" width="92" height="16"/>
+        <rect x="260" y="238" width="92" height="16"/>
+        <rect x="260" y="296" width="92" height="16"/>
+      </g>
+      <path d="M250 84 C204 158 184 252 182 330 L250 330 Z" fill="url(#sail)"/>
+      <g clip-path="url(#sailL)" fill="#3d78b8" opacity=".8">
+        <rect x="176" y="200" width="80" height="14"/>
+        <rect x="176" y="256" width="80" height="14"/>
+      </g>
+      <path d="M148 330 H372 C360 356 336 368 300 370 H220 C184 368 160 356 148 330 Z" fill="#e8eef6"/>
+      <path d="M156 341 H364" stroke="#3572b4" stroke-width="6" opacity=".85"/>
+    </svg>
+  </header>
+
+  <main>
+    <!-- ================= КАКИЕ ВИЗЫ ================= -->
+    <section class="section visas" id="visas">
+      <h2 class="title">Какие визы мы оформляем?</h2>
+      <p class="title-sub">Оформляем только туристические визы — в Грецию и Японию</p>
+      <div class="visa-grid">
+        <div class="visa-col">
+          <div class="visa-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l9-6 9 6"/><path d="M4 9h16"/>
+              <path d="M6 12v6M10 12v6M14 12v6M18 12v6"/>
+              <path d="M4 18h16"/><path d="M3 21h18"/>
+            </svg>
+          </div>
+          <h3>Визы в Грецию</h3>
+          <ul class="visa-list">
+            <li>Туристическая виза (шенген)</li>
+          </ul>
+          <p class="visa-note">Срок оформления: от 1 до 3 рабочих дней</p>
+          <p class="visa-note hl">Гарантия получения визы</p>
+        </div>
+        <div class="visa-col">
+          <div class="visa-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2.5v2.5"/>
+              <path d="M5.5 9c2-2.2 4.4-3.2 6.5-3.2S16.5 6.8 18.5 9c-2 .9-4.2 1.3-6.5 1.3S7.5 9.9 5.5 9z"/>
+              <path d="M8 10v3M16 10v3"/>
+              <path d="M4 15.5c2.6-2 5.6-2.8 8-2.8s5.4.8 8 2.8c-2.6 1-5.4 1.5-8 1.5s-5.4-.5-8-1.5z"/>
+              <path d="M8.5 17v3.5M15.5 17v3.5M6 20.5h12"/>
+            </svg>
+          </div>
+          <h3>Визы в Японию</h3>
+          <ul class="visa-list">
+            <li>Туристическая виза</li>
+          </ul>
+          <p class="visa-note">Срок оформления: от 5 до 7 рабочих дней</p>
+          <p class="visa-note hl">Полный пакет документов</p>
+        </div>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 44 C180 74 360 10 540 34 C720 58 900 66 1080 40 C1200 22 1320 26 1440 44 L1440 70 L0 70 Z" fill="#e2e9f3"/>
+      </svg>
+    </section>
+
+    <!-- ================= УСЛУГИ ================= -->
+    <section class="section services" id="services">
+      <h2 class="title">Наши услуги</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <circle cx="8.5" cy="10" r=".9" fill="currentColor" stroke="none"/>
+              <circle cx="12" cy="10" r=".9" fill="currentColor" stroke="none"/>
+              <circle cx="15.5" cy="10" r=".9" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          Консультация и подбор пакета документов
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h6"/>
+              <path d="M14 2v5h5"/>
+              <path d="M16.5 12.5a2.1 2.1 0 0 1 3 3L13 22l-4 1 1-4z"/>
+            </svg>
+          </div>
+          Подготовка документов и подача в консульство
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="7" y="3" width="13" height="9.5" rx="2"/>
+              <circle cx="11" cy="7.5" r="1.7"/>
+              <path d="M14.5 7h3.5M14.5 9.5h3.5"/>
+              <path d="M3 15.5c3-1.6 6-1.6 9 0l4.5 2.2c1.2.6 1.2 2.2 0 2.8L13 22H4a1 1 0 0 1-1-1z"/>
+            </svg>
+          </div>
+          Оформление визы под ключ без присутствия в консульстве
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M1 4h14v12H1z"/>
+              <path d="M15 9h4l4 4v3h-8V9z"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          Доставка готовых документов курьером
+        </div>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 40 C200 66 400 12 600 36 C800 60 1000 62 1200 34 C1280 23 1360 26 1440 40 L1440 70 L0 70 Z" fill="#edf1f8"/>
+      </svg>
+    </section>
+
+    <!-- ================= ПОЧЕМУ МЫ ================= -->
+    <section class="section why" id="why">
+      <svg class="why-bg" viewBox="0 0 900 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="currentColor">
+          <path d="M120 90l40 12-40 12 10-12z" transform="rotate(-15 140 102)"/>
+          <path d="M760 190l40 12-40 12 10-12z" transform="rotate(10 780 202)"/>
+          <circle cx="240" cy="220" r="4"/><circle cx="420" cy="70" r="4"/><circle cx="640" cy="110" r="4"/><circle cx="520" cy="240" r="4"/>
+        </g>
+        <path d="M150 105 C300 40 500 250 770 195" stroke="currentColor" stroke-width="2" stroke-dasharray="4 8" fill="none"/>
+      </svg>
+      <h2 class="title">Почему стоит выбрать нас?</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>
+          </div>
+          <p class="why-text">Опыт работы на рынке более 10 лет</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 9.9-8 11-4.5-1.1-8-6-8-11V5z"/><path d="M8.5 11.5l2.5 2.5 4.5-5"/></svg>
+          </div>
+          <p class="why-text">Высокий процент одобрения</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 7.5l3 4.5 3-4.5M12 12v5M9.3 13h5.4M9.3 15.2h5.4"/></svg>
+          </div>
+          <p class="why-text">Прозрачная цена без скрытых платежей</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"/><path d="M5 20c1.2-3.6 4-5.5 7-5.5s5.8 1.9 7 5.5"/><path d="M12 14.5l1.2 2-1.2 3-1.2-3z"/></svg>
+          </div>
+          <p class="why-text">Персональный менеджер для каждого клиента</p>
+        </div>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 46 C240 70 420 14 660 36 C900 58 1140 60 1440 30 L1440 70 L0 70 Z" fill="#e2e9f3"/>
+      </svg>
+    </section>
+
+    <!-- ================= КАК МЫ РАБОТАЕМ ================= -->
+    <section class="section steps-bg" id="steps">
+      <h2 class="title">Как мы работаем?</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M9 13l2.2 2.2L15.5 11"/></svg>
+          </div>
+          <p class="step-num">1. Оставьте заявку</p>
+          <p>Позвоните нам или оставьте заявку на сайте</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+          </div>
+          <p class="step-num">2. Консультация</p>
+          <p>Менеджер свяжется с вами и подскажет по туристической визе</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg>
+          </div>
+          <p class="step-num">3. Подача документов</p>
+          <p>Мы готовим и подаём документы в консульство</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M5.5 16c.6-1.6 4.4-1.6 5 0"/><path d="M14 9.5h5M14 13h5"/></svg>
+          </div>
+          <p class="step-num">4. Одобрение</p>
+          <p>Вы получаете подтверждение о готовности визы</p>
+        </div>
+        <div class="step">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 4h14v12H1z"/><path d="M15 9h4l4 4v3h-8V9z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <p class="step-num">5. Получение визы</p>
+          <p>Курьер доставит документы в удобное для вас место</p>
+        </div>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 42 C220 68 440 12 660 34 C880 56 1100 62 1440 34 L1440 70 L0 70 Z" fill="#eaf0f7"/>
+      </svg>
+    </section>
+
+    <!-- ================= СТОИМОСТЬ ================= -->
+    <section class="section pricing" id="pricing">
+      <h2 class="title">Стоимость услуг</h2>
+      <div class="pricing-wrap">
+        <div class="price-card">
+          <h3>Визы в Грецию</h3>
+          <p class="price">от 10 000 <span class="cur">руб.</span></p>
+          <p class="price-sub">Под ключ · шенген</p>
+          <p class="price-term">Срок изготовления: от 1 до 3 рабочих дней</p>
+        </div>
+        <div class="price-card">
+          <h3>Визы в Японию</h3>
+          <p class="price">10 000–11 000 <span class="cur">руб.</span></p>
+          <p class="price-sub">Под ключ · туристическая</p>
+          <p class="price-term">Срок изготовления: от 5 до 7 рабочих дней</p>
+        </div>
+        <a class="btn" href="#request">Оставить заявку</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= CTA ================= -->
+  <section class="cta" id="request">
+    <svg class="wave-top" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 0 H1440 V26 C1260 54 1080 10 900 30 C720 50 540 58 360 34 C240 18 120 22 0 40 Z" fill="#eaf0f7"/>
+    </svg>
+    <div class="cta-inner">
+      <svg class="cta-plane" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M8 78 C30 70 48 66 66 62" stroke-dasharray="2 8" opacity=".7"/>
+        <path d="M112 12 L58 66 L52 44 Z" fill="currentColor" stroke="none" opacity=".9"/>
+        <path d="M112 12 L52 44 L28 36 Z" fill="currentColor" stroke="none" opacity=".6"/>
+        <path d="M52 44 L58 66 L66 52 Z" fill="currentColor" stroke="none" opacity=".75"/>
+      </svg>
+      <h2>Остались вопросы?<br>Напишите нам!</h2>
+      <a class="btn" href="mailto:info@visage.ru?subject=%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%BE%D1%84%D0%BE%D1%80%D0%BC%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%D0%B8%D0%B7%D1%8B">Оставить заявку</a>
+    </div>
+  </section>
+
+  <!-- ================= ПОДВАЛ ================= -->
+  <footer id="contacts">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <a class="logo" href="#top">
+          <svg class="logo-mark" viewBox="0 0 52 52" aria-hidden="true" style="width:44px;height:44px">
+            <circle cx="26" cy="26" r="26" fill="#1e6bc0"/>
+            <path d="M25 9v22H13c1-9 6-17 12-22z" fill="#ffffff"/>
+            <path d="M28 12v19h11c-1-8-5-15-11-19z" fill="#dfe9f5"/>
+            <path d="M11 34h30c-3 6.5-8.5 10-15 10s-12-3.5-15-10z" fill="#ffffff"/>
+            <path d="M9 41q4 3 8 0q4 3 8 0q4 3 8 0q4 3 8 0" stroke="#9cc4ec" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span>
+            <span class="logo-name">VISAGE</span><br>
+            <span class="logo-tag">визовые решения</span>
+          </span>
+        </a>
+        <p class="footer-note">Оформление туристических виз под ключ в Грецию и Японию</p>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a class="contact-line" href="tel:88005552460">
+          <span class="contact-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          8 800 555-24-60
+        </a>
+        <a class="contact-line" href="mailto:info@visage.ru">
+          <span class="contact-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7L22 7"/></svg></span>
+          info@visage.ru
+        </a>
+        <span class="contact-line">
+          <span class="contact-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          Москва, ул. Новая, д. 1, офис 1
+        </span>
+      </div>
+      <div class="footer-links">
+        <h4>Информация</h4>
+        <a href="#why">О компании</a>
+        <a href="#services">Услуги</a>
+        <a href="#pricing">Стоимость</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+    </div>
+    <div class="socials">
+      <a class="social" href="#" aria-label="ВКонтакте">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16" text-anchor="middle" font-size="10.5" font-weight="700" fill="currentColor" font-family="Arial, sans-serif">VK</text></svg>
+      </a>
+      <a class="social" href="#" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z"/><path d="M9.2 8.6c.3-.6.6-.6.9-.6h.5c.2 0 .4 0 .6.5l.8 1.9c.1.3 0 .5-.1.7l-.5.6c-.1.2-.2.4 0 .7.6 1.1 1.5 1.9 2.6 2.4.3.1.5.1.7-.1l.6-.7c.2-.2.4-.3.7-.2l1.9.9c.4.2.4.4.4.6 0 .8-.6 1.6-1.4 1.8-.6.1-1.4.3-4.3-1.1-2.3-1.1-3.6-3.2-3.9-3.7-.9-1.4-1.1-2.7-.6-3.7z" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a class="social" href="#" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg>
+      </a>
+      <a class="social" href="#" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 5.8c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.3 1.7-2.2-.8.5-1.6.8-2.5 1a4 4 0 0 0-6.9 3.6A11.4 11.4 0 0 1 3.7 4.7a4 4 0 0 0 1.2 5.3c-.6 0-1.3-.2-1.8-.5v.1c0 1.9 1.4 3.5 3.2 3.9-.6.2-1.2.2-1.8.1a4 4 0 0 0 3.7 2.8A8 8 0 0 1 2 18.6a11.3 11.3 0 0 0 6.1 1.8c7.4 0 11.4-6.1 11.4-11.4v-.5c.8-.6 1.5-1.3 2-2.2z"/></svg>
+      </a>
+      <a class="social" href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15 3h-3a4 4 0 0 0-4 4v3H5v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a class="social" href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </div>
+    <p class="copyright">© 2026 VISAGE. Визовые решения. Все права защищены.</p>
+  </footer>
+</div>
+</body>
+</html>
